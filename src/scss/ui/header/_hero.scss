@@ -1,0 +1,67 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+
+.hero {
+    padding: 0  0 2rem 0;
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        max-width: 23rem;
+        justify-content: center;
+        @include m.tablet  {
+            max-width: initial;
+            gap: 0;
+        }
+        
+        @include m.desktop { 
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        @media(min-width: 3000px) {
+            justify-content: center;
+            gap: 10rem;
+        }
+    }
+
+    &__imagen {
+        width: 25rem;
+        height: 25rem;
+        @include m.tablet { 
+            width: 40rem;
+            height: 40rem;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.8rem;
+        @include m.tablet { 
+            align-items: center;
+            
+        }
+        @include m.desktop { 
+            align-items: flex-start;
+        }
+    }
+    &__heading {
+        font-weight: 800;
+        @include m.tablet { 
+            font-size: 6rem;
+        }
+    }
+
+    &__descripcion {
+       text-align: center
+    }
+
+    &__btn {
+        @include m.boton(v.$primario, v.$blanco);
+    }
+}

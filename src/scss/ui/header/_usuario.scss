@@ -1,0 +1,40 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+
+.usuario {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: v.$blanco;
+    @include m.tablet { 
+        margin-left: 1rem;
+        padding: 0;
+    }
+    &__link {
+        color: v.$negro;
+        &:nth-child(1) {
+            padding-left: .5rem;
+            width: fit-content;
+            &:before {
+                content: '';
+                position: absolute;
+                background-image: url('../assets/img/img-iconos/user.svg');
+                background-size: contain;
+                width: 2rem;
+                height: 2rem;
+                left: -40%;
+                @include m.tablet { 
+                    left: -30%;
+                }
+            }
+           
+        }
+    }
+    
+    &--none {
+       display: none;
+       @include m.tablet { 
+            display: block;
+       }
+    }
+}
