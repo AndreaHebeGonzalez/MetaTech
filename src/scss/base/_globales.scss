@@ -23,6 +23,10 @@ body {
     margin: 0 auto;
 }
 
+[class$="seccion"] {
+    padding: 2.5rem 0;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -30,8 +34,4 @@ img {
 
 ul {
     list-style: none;
-}
-
-a {
-    text-decoration: none;
 }

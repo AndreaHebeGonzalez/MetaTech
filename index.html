@@ -3,47 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
     <title>MetaTech</title>
   </head>
   <body>
 
 
     <main class="main contenedor">
-      <section class="seccion categorias"> <!-- Mide todo el ancho del contenido incluso las categorias que sobresalen del viewport -->
+      <section class="categorias seccion"> <!-- Mide todo el ancho del contenido incluso las categorias que sobresalen del viewport -->
         <div class="categorias__contenido-visible"> <!-- Mide el ancho del viewport -->
 					<div class="categoria">
-            <div class="categoria__imagen">
+            <div class="categoria__imagen categoria__imagen--bg-gaming">
               <img src="./src/assets/img/categorias/gaming.png" alt="Imagen categoría gaming">
             </div>
             <p class="categoria__nombre">Gaming</p>
           </div> <!-- Fin categoria -->
 
 					<div class="categoria">
-            <div class="categoria__imagen">
+            <div class="categoria__imagen categoria__imagen--bg-celulares">
               <img src="./src/assets/img/categorias/celulares.png" alt="Imagen categoría celulares">
             </div>
             <p class="categoria__nombre">Celulares</p>
           </div> <!-- Fin categoria -->
 
 					<div class="categoria">
-            <div class="categoria__imagen">
+            <div class="categoria__imagen categoria__imagen--bg-smartwaches">
               <img src="./src/assets/img/categorias/smartwaches.png" alt="Imagen categoría smartwaches">
             </div>
             <p class="categoria__nombre">Smartwaches</p>
           </div> <!-- Fin categoria -->
 
 					<div class="categoria">
-            <div class="categoria__imagen">
+            <div class="categoria__imagen categoria__imagen--bg-audioyvideo">
               <img src="./src/assets/img/categorias/audioyvideo.png" alt="Imagen categoría audio y video">
             </div>
             <p class="categoria__nombre">Audio y video</p>
           </div> <!-- Fin categoria -->
 
 					<div class="categoria">
-            <div class="categoria__imagen">
+            <div class="categoria__imagen categoria__imagen--bg-computacion">
               <img src="./src/assets/img/categorias/computacion.png" alt="Imagen categoría computacion">
             </div>
             <p class="categoria__nombre">Computación</p>
@@ -51,9 +49,15 @@
         </div>
       </section>
 
-			<section class="seccion ofertas">
-        .ofertas__
-				<h2 class="ofertas__heading contenedor">Ofertas Relámpago!</h2>
+			<section class="ofertas seccion">
+        <div class="ofertas__heading-arrows">
+          <h2 class="ofertas__heading contenedor">Ofertas Relámpago</h2>
+          <div class="ofertas__arrows">
+            <img src="./src/assets/img/img-iconos/arrow-carrusel-left.svg" alt="flecha izquierda">
+            <img src="./src/assets/img/img-iconos/arrow-carrusel-right.svg" alt="flecha derecha">
+          </div>
+        </div>
+				
         <div class="productos"> <!-- Ocupa el ancho total de todos los productos del carrusel -->
           <div class="productos__box-carrusel">
             <div class="productos__carrusel contenedor">

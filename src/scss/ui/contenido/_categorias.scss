@@ -1,0 +1,75 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.categorias {
+    &__contenido-visible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    &__imagen {
+        width: 20rem;
+        height: 15rem;
+        border-radius: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &--bg-gaming {
+            background-color: v.$bg-rosa;
+            & img {
+                width: 12rem;
+                height: auto;
+            }
+        }
+
+        &--bg-celulares {
+            background-color: v.$bg-amarillo;
+            & img {
+                width: 12rem;
+                height: auto;
+            }
+        }
+
+        &--bg-smartwaches{
+            background-color: v.$bg-verde;
+            & img {
+                width: 14rem;
+                height: auto;
+            }
+        }
+
+        &--bg-audioyvideo {
+            background-color: v.$bg-azul;
+            & img {
+                width: 12rem;
+                height: auto;
+            }
+        }
+
+        &--bg-computacion {
+            background-color: v.$bg-violeta;
+            & img {
+                width: 10.5rem;
+                height: auto;
+            }
+        }
+    }
+
+    &__nombre {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
+
