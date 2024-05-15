@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+[class$="heading"] {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+h2, h3 {
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3  {
+    font-size: 2.4rem;
+}
+
+p {
+    color: v.$negro;
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: v.$negro;
+}
