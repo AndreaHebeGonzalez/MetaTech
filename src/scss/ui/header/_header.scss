@@ -1,0 +1,64 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+
+.header {
+    background-color: v.$blanco;
+    
+    &__barra-principal {
+        padding: 2rem 0;
+        background-color: v.$negro;
+    }
+
+    &__barra-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu-abrir {
+        cursor: pointer;
+        @include m.tablet { 
+            display: none;
+        }
+    }
+    
+    &__acciones {
+        padding: 3rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__productos {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+
+        & > a {
+            & > span {
+                position: absolute;
+                right: -20%;
+                top: -20%;
+                color: v.$negro;
+                font-weight: 900;
+                z-index: 99;
+            }
+        }
+    }
+
+    &__barra-inferior {
+        @include m.desktop { 
+            background-image: url('../assets/img/banners/ola-header.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left center;
+            margin-top: -1rem;
+        }
+        @media(min-width: 3000px) {
+            background-image: none;
+        }
+    }
+}
+

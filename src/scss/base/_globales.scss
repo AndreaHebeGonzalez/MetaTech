@@ -15,12 +15,17 @@ body {
     background-color: v.$gris-claro;
     font-family: v.$fuentePrincipal;
     font-size: 1.6rem;
+    font-weight: 300;
 }
 
 [class$="contenedor"] {
     max-width: 120rem;
     width: 95%;
     margin: 0 auto;
+
+    @media(min-width: 1600px) {
+        max-width: 140rem;
+    }
 }
 
 [class$="seccion"] {
