@@ -1,7 +1,6 @@
 @use 'variables' as v;
 
 [class$="heading"] {
-    margin-bottom: 3rem;
     line-height: 1.2;
 }
 
@@ -24,8 +23,7 @@ h3  {
 
 p {
     color: v.$negro;
-    font-size: 1.6rem;
-    line-height: 1.8;
+    font-size: 1.8rem;
 }
 
 a {
