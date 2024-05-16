@@ -4,12 +4,10 @@
 
 .header {
     background-color: v.$blanco;
-    
     &__barra-principal {
         padding: 2rem 0;
         background-color: v.$negro;
     }
-
     &__barra-menu {
         display: flex;
         justify-content: space-between;
@@ -22,7 +20,12 @@
             display: none;
         }
     }
-    
+    &__logo img {
+        width: 20rem;
+        @include m.telefono { 
+            width: 25rem;
+        }
+    }
     &__acciones {
         padding: 3rem;
         display: flex;
@@ -30,24 +33,24 @@
         align-items: center;
         gap: 2rem;
     }
-
     &__productos {
         display: flex;
         gap: 1.5rem;
         align-items: center;
-
-        & > a {
-            & > span {
+        a {
+             span {
                 position: absolute;
-                right: -20%;
-                top: -20%;
-                color: v.$negro;
-                font-weight: 900;
-                z-index: 99;
+                top: -30%;
+                right: -30%;
+                color: v.$blanco;
+                z-index: 10;
+                padding: 0 .4rem;
+                background-color: v.$negro;
+                border-radius: 50%;
+                font-size: 1.1rem;
             }
         }
     }
-
     &__barra-inferior {
         @include m.desktop { 
             background-image: url('../assets/img/banners/ola-header.svg');
