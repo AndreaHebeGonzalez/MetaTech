@@ -5,15 +5,14 @@
 .navbar {
     background-color: v.$gris-claro;
     border: .1rem solid v.$primario;
-    height: 70vh;
+    height: 90dvh;
     width: 80%;
-    position: absolute;
-    z-index: 100;
-    top: -40%;
-    left: -100%; // -2.6%
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: -100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: .3s;
     @include m.tablet { 
        display: none;
@@ -29,6 +28,7 @@
 }
 
 .navegador {
+    flex: 1;
     display: flex;
     flex-direction: column;
 
@@ -42,10 +42,12 @@
     }
 
     &__link {
-        padding: 2rem;
+        padding: 1.5rem 0 1.5rem 2rem;
         color: v.$negro;
         border-bottom: .1rem solid #D3D2D2; 
         display: block;
+        font-weight: 700;
+        transition: .3s;
         @include m.tablet { 
             color: v.$blanco;
             padding: 0;
@@ -58,7 +60,7 @@
 
             @include m.tablet { 
                 background-color: transparent;
-                color:  lighten(v.$primario, 15%);
+                color: lighten(v.$primario, 10%);
             }
         }
     }

@@ -1,0 +1,41 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.marcas {
+    padding-bottom: 2.5rem;
+    display: flex;
+    @include m.desktop { 
+        display: flex;
+    }
+    &__imagen {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        border: .1rem solid darken(v.$gris-claro,  20%);
+        transition: .3s;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(6) {
+            display: none;
+        }
+        @include m.desktop { 
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(6) {
+                display: flex;
+            }  
+        }
+       
+       
+        &:hover {
+            background-color: transparentize(v.$negro, .9);
+        }
+
+       img {
+        width: 10rem;
+        height: 9rem;
+       }
+    }
+}

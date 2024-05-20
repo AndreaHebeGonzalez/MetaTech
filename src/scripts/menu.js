@@ -9,7 +9,7 @@ function eventListeners() {
 }
 
 function abrir() {
-    navegador.style.left = '-2.6%';
+    navegador.style.left = '0';
     
 }
 
