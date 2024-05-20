@@ -1,0 +1,78 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.ofertas {
+
+    &__heading-arrows {
+        text-align: center;
+
+
+        @include m.tablet { 
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__arrows {
+        display: none;
+
+        @include m.tablet { 
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        & img {
+            width: 2.5rem;
+        }
+    }
+}
+
+.productos {
+    display: grid;
+    place-items: center;
+
+
+    &__box-carrusel {
+        padding: 3rem 0;
+        overflow: hidden;
+    }
+
+    &__carrusel {
+        width: max-content;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+    }
+}
+
+.producto {
+    width: 95vw; /* La idea es que entre una carta sola */
+
+    @include m.tablet { 
+        width: calc(47.5vw - 3rem);
+        margin: 0 1rem;
+    }
+
+    @media (min-width: 1024px) { 
+        width: calc(31.6666666vw - 2.5rem);
+    }
+
+    @media (min-width: 1300px) {
+        width: 40.75rem; 
+    }
+
+    @media (min-width: 1600px) {
+        width: 43.75rem; 
+    }
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
