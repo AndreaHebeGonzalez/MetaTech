@@ -13,6 +13,7 @@
         height: 25rem;
         overflow: hidden;
         border-radius: .5rem;
+        transition: .6s;
         @include m.desktop { 
             padding: 3rem 5rem;
         }
@@ -20,6 +21,9 @@
         
     &__banner:nth-child(1) {
         background-color: v.$bg-azul;
+        &:hover {
+            background-color: darken(v.$bg-azul, 6%);
+        }
         @include m.tablet { 
             height: 100%;
             grid-row: 1/3;
@@ -27,12 +31,18 @@
     }
     &__banner:nth-child(2) {
         background-color: v.$bg-amarillo;
+        &:hover {
+            background-color: darken(v.$bg-amarillo, 6%);
+        }
         @include m.tablet { 
             grid-column: 2/4;
         }
     }
     &__banner:nth-child(3) { 
         background-color: v.$bg-verde;
+        &:hover {
+            background-color: darken(v.$bg-verde, 6%);
+        }
         @include m.tablet { 
             grid-column: 2/4;   
         }
