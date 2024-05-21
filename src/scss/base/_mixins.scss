@@ -7,12 +7,24 @@
     }
 }
 
+@mixin telefono-2 {
+    @media (min-width: v.$telefono-2) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;
     }
 }
-  
+
+@mixin tablet-2 {
+    @media (min-width: v.$tablet-2) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media (min-width: v.$desktop) {
         @content;
