@@ -1,0 +1,87 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.setup {
+    background-color: v.$blanco;
+    padding: 5rem 0;
+
+    &__grid {
+        @include m.desktop { 
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            column-gap: 2rem;
+        }
+    }
+
+    &__mejores-productos {
+        overflow: hidden;
+        border-radius: .5rem;
+        margin-bottom: 1.9rem;
+        height: 100%;
+    }
+
+    &__imagen {
+        filter: blur(.2rem);
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+        @include m.desktop { 
+            height: 100%;
+        }
+    }
+
+    &__heading {
+        min-width: 24.1rem;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        color: v.$blanco;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        span {
+            font-weight: 800;
+        }
+    }
+
+    &__categoria {
+        margin-bottom: 3rem;
+        border-bottom: .1rem solid darken(v.$gris-claro, 20%);
+        display: flex;
+        justify-content: space-evenly;
+        @include m.desktop { 
+            justify-content: flex-start;     
+            gap: 3rem;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 1.8rem;
+            position: relative;
+            text-align: center;
+            padding: 1rem 0;
+            &:focus {
+                color: darken(v.$primario, 15%);
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    border-bottom: .2rem solid v.$primario;
+                }
+            }
+        }
+    }
+    &__cartas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        @include m.tablet { 
+            @include m.grid(2, 1fr);
+        }
+    }
+}
