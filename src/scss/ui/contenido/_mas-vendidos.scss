@@ -5,16 +5,18 @@
 
     
     &__grid {
-        display: grid;  
-        justify-content: center;
-        gap: 3rem;
+        display: flex;
+        flex-direction: column;
         
         @media (min-width: 768px) and (max-width: 991px) { 
-            flex-direction: row;
+            
         }
 
         @include m.tablet-2 { 
             grid-template-columns: repeat(3, 1fr);
+            display: grid;  
+            justify-content: center;
+            gap: 3rem;
         }
     }
 
