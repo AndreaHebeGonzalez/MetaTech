@@ -27,7 +27,7 @@ body {
     }
 }
 
-[class$="seccion"] {
+[class*="seccion"] {
     padding: 2.5rem 0;
 }
 
