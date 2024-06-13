@@ -5,8 +5,8 @@
 
     &__heading-arrows {
         text-align: center;
-
-        @include m.tablet { 
+        
+        @media (min-width: 680px) { 
             text-align: left;
             display: flex;
             justify-content: space-between;
@@ -14,11 +14,10 @@
         }
     }
 
-
     &__arrows {
         display: none;
 
-        @include m.tablet { 
+        @media (min-width: 680px) { 
             display: flex;
             justify-content: space-between;
             gap: 3rem;
@@ -30,54 +29,8 @@
     }
 }
 
-.productos {
-    padding: 3rem 0;
-    display: grid;
-    place-items: center;
-    gap: 3rem;
 
-    &__box-carrusel {
-        overflow: hidden;
-    }
-
-    &__carrusel {
-        width: max-content;
-        height: 100%;
-        display: flex;
-        justify-content: left;
-    }
-}
-
-.producto {
-    width: 95vw; /* La idea es que entre una carta sola */
-
-    @include m.tablet { 
-        width: calc(47.5vw - 3rem);
-        margin: 0 1rem;
-    }
-
-    @media (min-width: 1024px) { 
-        width: calc(31.6666666vw - 2rem);
-    }
-
-    @media (min-width: 1300px) {
-        width: 40.75rem; 
-    }
-
-    @media (min-width: 1600px) {
-        width: 43.93rem; 
-    }
-
-    &:first-of-type {
-        margin-left: 0;
-    }
-
-    &:last-of-type {
-        margin-right: 0;
-    }
-}
-
-/* ***** Banner ofertas ***** */
+/* ***** Banners ofertas ***** */
 
 .banners-doble {
     padding: 2.5rem 0;
