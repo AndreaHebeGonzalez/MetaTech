@@ -17,6 +17,17 @@ export default defineConfig({
     },
 
     plugins: [
-        imagemin()
-    ]
+        imagemin({
+            webp: {
+                quality: 95,
+                method: 6,
+            },
+            svgo: {
+                plugins: [
+                    { name: 'removeDoctype', active: true },
+                    { name: 'removeComments', active: true },
+                ],
+            },
+        }),
+    ],
 });
